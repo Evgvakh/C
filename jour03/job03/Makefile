@@ -1,16 +1,16 @@
-SRC_MAIN = main.c
-SRC_PUT = my_put.c
+.PHONY: all
 
-OBJ_MAIN = main.o
-OBJ_PUT = my_put.o
+SRC = main.c my_put.c
+SRCS := $(SRC:.c=.o)
 
 TARGET = my_make_evolve
 
-$(TARGET): $(OBJ_MAIN) $(OBJ_PUT)
-	gcc -o $(TARGET) $(OBJ_MAIN) $(OBJ_PUT)
+COMP_FLAG = c
+OBJ_FLAG = o
 
-$(OBJ_PUT) : $(SRC_PUT)
-	gcc -c $(SRC_PUT) 
+$(TARGET): $(SRCS)
+	gcc -$(OBJ_FLAG) $(TARGET) $(SRC)
 
-$(OBJ_MAIN) : $(SRC_MAIN)
-	gcc -c $(SRC_MAIN) 
+all:
+	$(TARGET)
+
