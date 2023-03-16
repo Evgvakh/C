@@ -13,8 +13,6 @@ int compare(char str[20], int i, int count) {
             return count;            
         }        
     }
-      
-    
 }
 
 int main() {
@@ -29,4 +27,6 @@ int main() {
     } else {
         printf("Non palindrome");
     }
+
+    return 0;
 }
