@@ -1,9 +1,10 @@
-.PHONY: all clean
+.PHONY: all
 
-SRC = main.c my_put.c
+
+SRC = main.c
 SRCS := $(SRC:.c=.o)
 
-TARGET = my_make_evolve
+TARGET = my_recurs
 
 COMP_FLAG = c
 OBJ_FLAG = o
@@ -13,6 +14,3 @@ $(TARGET): $(SRCS)
 
 all:
 	$(TARGET)
-
-clean:
-	rm -f *.o

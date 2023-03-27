@@ -1,6 +1,23 @@
 #include <stdio.h>
 
-int horis(lar, hau) {
+int horis(int lar, int hau);
+int vert(int arg);
+
+int main() {
+    int hauteur;
+    int largeur;
+
+    printf("Entrez l'hauteur: ");    
+    scanf("%d", &hauteur);
+    printf("Entrez la largeur: ");
+    scanf("%d", &largeur);
+
+    horis(hauteur, largeur);    
+
+    return 0;
+}
+
+int horis(int lar, int hau) {
     vert(hau);
     printf("%c\n", '-');    
     if (lar > 1) {
@@ -8,15 +25,9 @@ int horis(lar, hau) {
     }
 }
 
-int vert(arg) {    
+int vert(int arg) {    
     if(arg > 1) {
         printf("%c", '-');
         vert(arg - 1);
     }
-}
-
-int main() {
-    horis(3, 8);    
-
-    return 0;
 }

@@ -9,8 +9,8 @@ COMP_FLAG = c
 OBJ_FLAG = o
 
 $(TARGET): $(SRCS)
-	gcc -$(OBJ_FLAG) $(TARGET) $(SRC)
+	gcc -$(OBJ_FLAG) $(TARGET) $(SRCS)
 
-all:
-	$(TARGET)
+# all:
+# 	$(TARGET)
 

@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\my_str.bin"
+                "${fileDirname}\\my_first_func.bin"
             ],
             "options": {
                 "cwd": "${fileDirname}"
